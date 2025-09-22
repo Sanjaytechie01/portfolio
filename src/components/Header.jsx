@@ -15,7 +15,7 @@ const Header = () => {
 
   const navItems = ['About', 'Skills', 'Projects', 'Experience', 'Contact'];
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId.toLowerCase());
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -24,9 +24,11 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold text-black">Portfolio</div>
